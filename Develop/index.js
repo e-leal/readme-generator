@@ -8,6 +8,12 @@ const questions = [
 "Please enter test instructions: "
 ];
 
+const testPrint = questions => {
+    for (let i = 0; i < questions.length; i+= 1){
+        console.log(questions[i]);
+    }
+}
+
 // function to write README file
 function writeToFile(fileName, data) {
 }
@@ -19,3 +25,4 @@ function init() {
 
 // function call to initialize program
 init();
+testPrint(questions);
