@@ -1,5 +1,13 @@
+const fs = require('fs');
+//const generatePage = require('./src/page-template.js');
+const inquirer = require('inquirer');
+// const questions = [
+//     'What is your project name? (Required)',
+//     'Enter your project description. (Required)',
+//     'Enter project installation instructions.(Required)'
+// ];
 // array of questions for user
-const questions () => { 
+const questions = () => { 
     return inquirer.prompt([
         {
             type: 'input',
@@ -54,6 +62,12 @@ const questions () => {
             }
         },
         {
+            type: 'checkbox',
+            name: 'license',
+            message: 'Please select license(s) applied for this project.',
+            choices: ['MIT', 'ISC', 'BSD', 'Apache']
+        },
+        {
             type: 'input',
             name: 'contribution',
             message: 'Enter contribution guidelines. (Required)',
@@ -80,27 +94,91 @@ const questions () => {
             }
         }
     ]);
+};
+
+// questions()
+//     .then(projectData => {
+//         console.log(projectData);
+//         return generatePage(projectData);
+//     })
+//     .then(pageReadMe => {
+//         return writeToFile(pageReadMe);
+//     })
+//     .then(writeFileResponse => {
+//         return copyFile();
+//     })
+//     .then(copyFileResponse => {
+//         console.log(copyFileResponse);
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     });
+
+
+const generateReadme = projData => {
+    console.log(projData);
+    const {project, description, ...steps} = projData;
+    return `
+    ## ${project}
+    
+    ## Description
+    ${description}
+
+    ## Table of Contents
+    This table of contents is used to help navigate a long README file:
+
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [Credits](#credits)
+    * [License](#license)   
+    
+    ## Installation
+    ${steps.installation}
+    
+    ## Usage
+    ${steps.usage}
+
+    ## License
+    ${steps.license}
+
+    ## Badges
+    ${steps.badges}
+    
+    ## Contribution
+    ${steps.contribution}
+    
+    ## Testing
+    ${steps.testing}`;
 }
 
-const fs = require('fs');
-const generatePage = require('./src/page-template.js');
 
-const testPrint = questions => {
-    for (let i = 0; i < questions.length; i+= 1){
-        console.log(questions[i]);
-    }
-}
 
 // function to write README file
-function writeToFile(fileName, data) {
+const writeToFile = (fileName, data) => {
+    return new Promise((resolve, reject) =>{
+        fs.writeFile(fileName, generateReadme(data), err =>{
+            if(err){
+                reject(err);
+                return;
+            }
 
-}
+            resolve({
+                ok:true,
+                message: 'File created!'
+            });
+        });
+    });
+};
+    
 
 // function to initialize program
 function init() {
-
-}
+    questions()
+    .then(projectData =>{
+        writeToFile('./README.md', projectData); 
+    })
+    
+};
 
 // function call to initialize program
 init();
-testPrint(questions);
