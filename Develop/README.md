@@ -1,9 +1,9 @@
 
-    ## Project name
-    ![License](https://img.shields.io/badge/License-MIT-brightgreen)
+    ## name
+    [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen)
     
     ## Description
-    description
+    desc
 
     ## Table of Contents
     This table of contents is used to help navigate a long README file:
@@ -17,7 +17,7 @@
     undefined
     
     ## Usage
-    deeets
+    use it
 
     ## License
     MIT
@@ -26,7 +26,7 @@
     undefined
     
     ## Contribution
-    contribute something
+    contribute
     
     ## Testing
-    testit!
+    test it

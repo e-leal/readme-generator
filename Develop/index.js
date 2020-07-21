@@ -121,7 +121,7 @@ const generateReadme = projData => {
     const {project, description, ...steps} = projData;
     return `
     ## ${project}
-    ![License](https://img.shields.io/badge/License-${steps.license}-brightgreen)
+    [![License](https://img.shields.io/badge/License-${steps.license}-brightgreen.svg)](https://img.shields.io/badge/License-${steps.license}-brightgreen)
     
     ## Description
     ${description}
