@@ -1,6 +1,6 @@
 
-    ## Name
-    (https://img.shields.io/badge/License-Apache-brightgreen)
+    ## Project
+    (![License](https://img.shields.io/badge/License-MIT-brightgreen))
     
     ## Description
     desc
@@ -17,16 +17,16 @@
     undefined
     
     ## Usage
-    usage is easy
+    use it
 
     ## License
-    Apache
+    MIT
 
     ## Badges
     undefined
     
     ## Contribution
-    Cotribute
+    nothing
     
     ## Testing
-    test it!
+    testng
