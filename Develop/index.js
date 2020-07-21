@@ -62,9 +62,10 @@ const questions = () => {
             }
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'Please select license(s) applied for this project.',
+            default: 'MIT',
             choices: ['MIT', 'ISC', 'BSD', 'Apache']
         },
         {
@@ -120,6 +121,7 @@ const generateReadme = projData => {
     const {project, description, ...steps} = projData;
     return `
     ## ${project}
+    (https://img.shields.io/badge/License-${steps.license}-brightgreen)
     
     ## Description
     ${description}
