@@ -1,9 +1,14 @@
 
-## sagaa
-![sagaa](https://img.shields.io/badge/License-MIT-blue)   
+## rik-e-what
+![rik-e-what](https://img.shields.io/badge/License-MIT-blue)   
     
 ## Description
-aghag
+It's pretty complicated, but there is one bright side to this.
+
+At least I can have multiline input now!
+
+It's amazingggggg!!!
+
 
 ## Table of Contents
 This table of contents is used to help navigate a long README file:
@@ -14,20 +19,24 @@ This table of contents is used to help navigate a long README file:
 * [License](#license)   
     
 ## Installation
-agaa
+eazy-peezy
     
 ## Usage
-aghaga
+usage is ehhh
 
 ## License
 MIT
 
 ## Badges
-![sagaa](https://img.shields.io/badge/License-MIT-blue)
+![rik-e-what](https://img.shields.io/badge/License-MIT-blue)
 This badge is applied for the license that is applied to the project
     
 ## Contribution
-ahhs
+tell me about it
     
 ## Testing
-ahah
+Test it alright alright alright
+
+## Questions?
+Github: [slimshady](http://github.com/slimshady)
+Email: madeup.com

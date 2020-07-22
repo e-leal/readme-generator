@@ -1,11 +1,6 @@
 const fs = require('fs');
-//const generatePage = require('./src/page-template.js');
 const inquirer = require('inquirer');
-// const questions = [
-//     'What is your project name? (Required)',
-//     'Enter your project description. (Required)',
-//     'Enter project installation instructions.(Required)'
-// ];
+
 // array of questions for user
 const questions = () => { 
     return inquirer.prompt([
@@ -15,6 +10,18 @@ const questions = () => {
             message: 'Enter your GitHub Name. (Required)',
             validate : nameInput => {
                 if(nameInput){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "What's a good email to reach you? (Required)",
+            validate: emailInput => {
+                if(emailInput){
                     return true;
                 }else{
                     return false;
@@ -35,7 +42,7 @@ const questions = () => {
             }
         },
         {
-            type: 'input',
+            type: 'editor',
             name: 'description',
             message: 'Enter your project description. (Required)',
             validate: descriptInput => {
@@ -48,7 +55,7 @@ const questions = () => {
             }
         },
         {
-            type: 'input',
+            type: 'editor',
             name: 'installation',
             message: 'Enter project installation instructions.(Required)',
             validate: installInput => {
@@ -82,7 +89,7 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'contribution',
+            name: 'editor',
             message: 'Enter contribution guidelines. (Required)',
             validate: contributeInput => {
                 if(contributeInput){
@@ -94,7 +101,7 @@ const questions = () => {
             }
         },
         {
-            type: 'input',
+            type: 'editor',
             name: 'testing',
             message: 'Enter project testing instructions. (Required)',
             validate: testInput => {
@@ -108,24 +115,6 @@ const questions = () => {
         }
     ]);
 };
-
-// questions()
-//     .then(projectData => {
-//         console.log(projectData);
-//         return generatePage(projectData);
-//     })
-//     .then(pageReadMe => {
-//         return writeToFile(pageReadMe);
-//     })
-//     .then(writeFileResponse => {
-//         return copyFile();
-//     })
-//     .then(copyFileResponse => {
-//         console.log(copyFileResponse);
-//     })
-//     .catch(err => {
-//         console.log(err);
-//     });
 
 
 const generateReadme = projData => {
@@ -143,8 +132,9 @@ This table of contents is used to help navigate a long README file:
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)   
+* [Contributing](#contributing)
+* [License](#license)
+* [Questions](#question)   
     
 ## Installation
 ${steps.installation}
@@ -159,14 +149,15 @@ ${steps.license}
 ![${project}](https://img.shields.io/badge/License-${steps.license}-blue)
 This badge is applied for the license that is applied to the project
     
-## Contribution
+## Contributing
 ${steps.contribution}
     
-## Testing
+## Tests
 ${steps.testing}
 
 ## Questions?
-Contact me through Github: ${steps.name}`;
+Github: [${steps.name}](http://github.com/${steps.name})
+Email: ${steps.email}`;
 }
 
 
