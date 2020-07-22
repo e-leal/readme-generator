@@ -88,8 +88,8 @@ const questions = () => {
             choices: ['MIT', 'ISC', 'BSD', 'Apache']
         },
         {
-            type: 'input',
-            name: 'editor',
+            type: 'editor',
+            name: 'contribution',
             message: 'Enter contribution guidelines. (Required)',
             validate: contributeInput => {
                 if(contributeInput){
@@ -134,7 +134,7 @@ This table of contents is used to help navigate a long README file:
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
-* [Questions](#question)   
+* [Questions](#questions)   
     
 ## Installation
 ${steps.installation}
@@ -155,8 +155,11 @@ ${steps.contribution}
 ## Tests
 ${steps.testing}
 
-## Questions?
+## Questions
 Github: [${steps.name}](http://github.com/${steps.name})
+
+You can reach me at the following email
+
 Email: ${steps.email}`;
 }
 

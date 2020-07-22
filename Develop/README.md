@@ -1,13 +1,9 @@
 
-## rik-e-what
-![rik-e-what](https://img.shields.io/badge/License-MIT-blue)   
+## name
+![name](https://img.shields.io/badge/License-MIT-blue)   
     
 ## Description
-It's pretty complicated, but there is one bright side to this.
-
-At least I can have multiline input now!
-
-It's amazingggggg!!!
+enter some details
 
 
 ## Table of Contents
@@ -15,28 +11,35 @@ This table of contents is used to help navigate a long README file:
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)   
+* [Contributing](#contributing)
+* [License](#license)
+* [Questions](#questions)   
     
 ## Installation
-eazy-peezy
+enter more details
+
     
 ## Usage
-usage is ehhh
+use it'
 
 ## License
 MIT
 
 ## Badges
-![rik-e-what](https://img.shields.io/badge/License-MIT-blue)
+![name](https://img.shields.io/badge/License-MIT-blue)
 This badge is applied for the license that is applied to the project
     
-## Contribution
-tell me about it
-    
-## Testing
-Test it alright alright alright
+## Contributing
+tenterwatq
 
-## Questions?
-Github: [slimshady](http://github.com/slimshady)
-Email: madeup.com
+    
+## Tests
+netejioja
+
+
+## Questions
+Github: [name](http://github.com/name)
+
+You can reach me at the following email
+
+Email: email
