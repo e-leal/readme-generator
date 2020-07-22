@@ -11,6 +11,18 @@ const questions = () => {
     return inquirer.prompt([
         {
             type: 'input',
+            name: 'name',
+            message: 'Enter your GitHub Name. (Required)',
+            validate : nameInput => {
+                if(nameInput){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
             name: 'project',
             message: 'What is your project name? (Required)',
             validate: projectInput => {
@@ -37,7 +49,7 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'install',
+            name: 'installation',
             message: 'Enter project installation instructions.(Required)',
             validate: installInput => {
                 if(installInput){
@@ -120,37 +132,41 @@ const generateReadme = projData => {
     console.log(projData);
     const {project, description, ...steps} = projData;
     return `
-    ## ${project}
-    [![License](https://img.shields.io/badge/License-${steps.license}-brightgreen.svg)](https://img.shields.io/badge/License-${steps.license}-brightgreen)
+## ${project}
+![${project}](https://img.shields.io/badge/License-${steps.license}-blue)   
     
-    ## Description
-    ${description}
+## Description
+${description}
 
-    ## Table of Contents
-    This table of contents is used to help navigate a long README file:
+## Table of Contents
+This table of contents is used to help navigate a long README file:
 
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Credits](#credits)
-    * [License](#license)   
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)   
     
-    ## Installation
-    ${steps.installation}
+## Installation
+${steps.installation}
     
-    ## Usage
-    ${steps.usage}
+## Usage
+${steps.usage}
 
-    ## License
-    ${steps.license}
+## License
+${steps.license}
 
-    ## Badges
-    ${steps.badges}
+## Badges
+![${project}](https://img.shields.io/badge/License-${steps.license}-blue)
+This badge is applied for the license that is applied to the project
     
-    ## Contribution
-    ${steps.contribution}
+## Contribution
+${steps.contribution}
     
-    ## Testing
-    ${steps.testing}`;
+## Testing
+${steps.testing}
+
+## Questions?
+Contact me through Github: ${steps.name}`;
 }
 
 

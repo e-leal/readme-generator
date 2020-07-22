@@ -1,32 +1,33 @@
 
-    ## name
-    [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen)
+## sagaa
+![sagaa](https://img.shields.io/badge/License-MIT-blue)   
     
-    ## Description
-    desc
+## Description
+aghag
 
-    ## Table of Contents
-    This table of contents is used to help navigate a long README file:
+## Table of Contents
+This table of contents is used to help navigate a long README file:
 
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Credits](#credits)
-    * [License](#license)   
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)   
     
-    ## Installation
-    undefined
+## Installation
+agaa
     
-    ## Usage
-    use it
+## Usage
+aghaga
 
-    ## License
-    MIT
+## License
+MIT
 
-    ## Badges
-    undefined
+## Badges
+![sagaa](https://img.shields.io/badge/License-MIT-blue)
+This badge is applied for the license that is applied to the project
     
-    ## Contribution
-    contribute
+## Contribution
+ahhs
     
-    ## Testing
-    test it
+## Testing
+ahah
